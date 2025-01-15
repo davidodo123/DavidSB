@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./ecuacion2grado.js"></script>
+    <title>Ecuaciones de 2º Grado</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        .equation {
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        input[type="number"] {
+            border: 0;
+            border-bottom: 1px solid #333;
+        }
+
+        input[type="number"]:focus-visible {
+            outline: 0;
+            border-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="equation">
+        <input id="a" type="number" placeholder="a"> x<sup style="margin-left: -4px">2</sup> +
+        <input id="b" type="number" placeholder="b"> x +
+        <input id="c" type="number" placeholder="c" <p>= 0</p>
+    </div>
+    <div>
+        <button onclic="solucion(1,5,6)">Solución</button>
+        <button>Limpiar</button>
+    </div>
+    <p id="finalResolve"></p>
+</body>
+
+</html>
