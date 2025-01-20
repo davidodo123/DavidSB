@@ -7,98 +7,175 @@
     <title>Página de Presentación</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    color: #fff;
+}
 
-        header {
-            background-color: #4c86af;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
 
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 0.5rem 0;
-        }
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav ul li {
-            margin: 0 1rem;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
+nav ul li {
+    margin: 0;
+}
 
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
 
-        h1 {
-            color: #181818;
-        }
+nav ul li a:hover {
+    color: #c33764;
+}
 
-        p {
-            line-height: 1.6;
-        }
+main {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        section {
-            margin-bottom: 2rem;
-        }
+section {
+    margin-bottom: 4rem;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffdddd;
+    letter-spacing: 1.5px;
+}
 
-        .skills div {
-            flex: 1 1 calc(33.333% - 1rem);
-            background: #e8f5e9;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }
+p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+}
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+.skills, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 
-        .contact-form input,
-        .contact-form textarea {
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+.skills div, .projects .project {
+    flex: 1 1 calc(30% - 2rem);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: white;
-            margin-top: 2rem;
-        }
+.skills div:hover, .projects .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.projects .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.testimonials {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.testimonial h4 {
+    color: #f0a500;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #666;
+}
+
+.contact-form button {
+    padding: 0.8rem 2rem;
+    background: #c33764;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #1d2671;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    margin-top: 3rem;
+}
     </style>
 </head>
 
@@ -112,6 +189,8 @@
         <ul>
             <li><a href="#about">Acerca de Mí</a></li>
             <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -124,6 +203,10 @@
             <p>Me encanta trabajar en proyectos que desafían mi creatividad y habilidades, y estoy entusiasmado por
                 conectar con personas con ideas similares.</p>
         </section>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <img src="7db8eb6c8ea4e89ec479280f46b4d053.jpg" alt="Foto de perfil" style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
 
         <section id="skills">
             <h1>Habilidades</h1>
@@ -138,27 +221,43 @@
                 </div>
                 <div>
                     <h3>Mi Curriculum</h3>
-                    <p></p>
+                    <a href="file:///C:/Users/pc/OneDrive/Escritorio/David_SantiagoBermudez_CV[1].pdf">Enlace Curriculum</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h1>Contacto</h1>
-            <p>Si deseas comunicarte conmigo, por favor completa el siguiente formulario:</p>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <section id="projects">
+            <h1>Proyectos</h1>
+            <div class="projects">
+                <div class="project">
+                    <a href="Calculadora.html" alt="Proyecto 1">
+                    <h3>CALCULADORA</h3>
+                    <img src="Calculadora.png" alt="" style="max-width: 100%;height: auto; border-radius: 8px;">
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/150" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+               
+            </div>
         </section>
 
-        <div>
-            <h1>Redes Sociales</h1>
-            <p>Instragram:</p>
-            <p>X:</p>
-        </div>
+        <section id="testimonials">
+            <h1>Testimonios</h1>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"David es alumno muy creativo y siempre entrega proyectos de calidad."</p>
+                    <h4>Profesorado Zaidín Vergéles</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Es fascinante como trabaja este alumno."</p>
+                    <h4>Director Manuel de Falla</h4>
+                </div>
+            </div>
+        </section>
+
+       
     </main>
 
     <footer>
